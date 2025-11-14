@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Filtering & UI</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google-Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet"></head>
+<body>
+
+    <header>
+        <h1>متجر المنتجات</h1>
+        <button class="theme-toggle" id="themeToggle">🌙 الوضع الليلي</button>
+    </header>
+
+    <main>
+        <section class="filtration-section">
+            <h2>تصفية المنتجات</h2>
+            <div class="filter-group">
+                <label for="nameFilter">البحث بالاسم</label>
+                <input type="text" id="nameFilter" placeholder="اكتب اسم المنتج...">
+            </div>
+            <div class="filter-group">
+                <label for="categoryFilter">الفئة</label>
+                <select id="categoryFilter">
+                    <option value="all">جميع الفئات</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="priceFilter">السعر الأقصى</label>
+                <input type="number" id="priceFilter" placeholder="أدخل سعراً أقصى...">
+            </div>
+        </section>
+
+        <section class="products-container" id="productsContainer">
+            <!-- Products  -->
+        </section>
+    </main>
+
+    <!-- Welcome Screen -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">❌</span>
+            <h2>أهلاً بك في متجرنا!</h2>
+            <p>اكتشف تشكيلتنا الرائعة من المنتجات.</p>
+        </div>
+    </div>
+
+    <script src="./moduleWelcome.js"></script>
+    <script src="./moduleFetch.js"></script>
+    <script src="./moduleTheme.js"></script>
+</body>
+</html>
